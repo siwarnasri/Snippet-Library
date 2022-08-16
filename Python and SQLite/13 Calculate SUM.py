@@ -1,10 +1,20 @@
 import sqlite3
 
-#Sqlite's average aggregate function selects the average value for a certain table column
+#Sqlite's SUM aggregate function allows selecting the total for a numeric column
+#This could be useful for adding up totals in a shopping basket, or doing financial SUMS/totals
+
+def calculate_sum():
+    conn=sqlite3.connect("test.db")
+    myrows=conn.execute("SELECT sum(POINTS) from STUDENT;")
+    print("The sum total of all the points held by the student in our database is.........")
+    print("=========================================")
+    for row in myrows:
+        print(row)
+    
 def calculate_average():
     conn=sqlite3.connect("test.db")
     myrows=conn.execute("SELECT avg(POINTS) from STUDENT;")
-    print("The average points for all students has been calculated:.........")
+    print("The average points held by all students in our database is.........")
     print("=========================================")
     for row in myrows:
         print(row)
@@ -129,4 +139,4 @@ def fetch_display():
     conn.close()
 
 
-calculate_average()
+calculate_sum()

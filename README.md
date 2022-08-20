@@ -6,11 +6,11 @@ It is important to note that, this is one approach, there are so many ways to sa
 
 The Steps to Save Snippets From the Clipboard:
 
-** 1. Specify a variable with the path for the snippets folder. **
-** 2. Write the code to get the contents of our clipboard. **
-** 3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format. **
-** 4. Save the final Python script in a folder. **
-** 5. Write an alias to call that script from anywhere in the terminal. **
+**1. Specify a variable with the path for the snippets folder.**
+**2. Write the code to get the contents of our clipboard.**
+**3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format. **
+**4. Save the final Python script in a folder. **
+**5. Write an alias to call that script from anywhere in the terminal. **
 
 Now, let’s go through each step one by one.
 
@@ -31,26 +31,25 @@ Here, we are using the clipboard package to get the contents of your clipboard.
 ## 3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format:
 
 > snippets_name = input("Snippet name: ")
-snippet_dest_path = global_snippets_folder + snippets_name + ".code-snippets"
+> snippet_dest_path = global_snippets_folder + snippets_name + ".code-snippets"
 
-
-with open(snippet_dest_path, "w+") as snippet_file:
-    snippet_file.write("{\n")
-    snippet_file.write(f"\"{snippets_name}\":")
-    snippet_file.write("{\n")
-    snippet_file.write('    "scope": "python",\n')
-    snippet_file.write('    "prefix": "' + snippets_name + '",\n')
-    snippet_file.write('    "body": [\n')
-    try:
-        for line in clipboard_content.splitlines("\n"):
-            snippet_file.write('        "' + line + '",\n')
-    except TypeError:
-        for line in clipboard_content.split("\n"):
-            snippet_file.write('        "' + line + '",\n')
-    snippet_file.write('    ],\n')
-    snippet_file.write('    "description": "' + snippets_name + '"\n')
-    snippet_file.write("}\n")
-    snippet_file.write("}\n")
+> with open(snippet_dest_path, "w+") as snippet_file:
+>     snippet_file.write("{\n")
+>     snippet_file.write(f"\"{snippets_name}\":")
+>     snippet_file.write("{\n")
+>     snippet_file.write('    "scope": "python",\n')
+>     snippet_file.write('    "prefix": "' + snippets_name + '",\n')
+>     snippet_file.write('    "body": [\n')
+>     try:
+>         for line in clipboard_content.splitlines("\n"):
+>             snippet_file.write('        "' + line + '",\n')
+>     except TypeError:
+>         for line in clipboard_content.split("\n"):
+>             snippet_file.write('        "' + line + '",\n')
+>     snippet_file.write('    ],\n')
+>     snippet_file.write('    "description": "' + snippets_name + '"\n')
+>     snippet_file.write("}\n")
+>     snippet_file.write("}\n")
     
 This is code saves the content of the clipboard to the specified folder with a name given by the user when calling the script and with the required format needed to call the snippet.
     

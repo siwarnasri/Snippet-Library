@@ -6,15 +6,15 @@ It is important to note that, this is one approach, there are so many ways to sa
 
 The Steps to Save Snippets From the Clipboard:
 
-    **1. Specify a variable with the path for the snippets folder.**
+  **1. Specify a variable with the path for the snippets folder.**
 
-    **2. Write the code to get the contents of our clipboard.**
+  **2. Write the code to get the contents of our clipboard.**
 
-    **3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format.**
+  **3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format.**
 
-    **4. Save the final Python script in a folder.**
+  **4. Save the final Python script in a folder.**
 
-    **5. Write an alias to call that script from anywhere in the terminal.**
+  **5. Write an alias to call that script from anywhere in the terminal.**
 
 Now, let’s go through each step one by one.
 

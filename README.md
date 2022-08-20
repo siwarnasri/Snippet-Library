@@ -1,14 +1,15 @@
 # Automating Snippets with Python
 
-Speeding up our snippets workflow with Python: Every good development workflow involves some kind of management of code snippets, where we are constantly storing and retrieving snippets of code to solve a wide range of tasks in our programming routine.
+  Speeding up our snippets workflow with Python: Every good development workflow involves some kind of management of code snippets, where we are constantly storing and retrieving snippets of code to solve a wide range of tasks in our programming routine.
 
-It is important to note that, this is one approach, there are so many ways to save snippets and retrieve them, in the end, we should experiment with as many tools as we can to see what works for us.
+  It is important to note that, this is one approach, there are so many ways to save snippets and retrieve them, in the end, we should experiment with as many tools as we can to see what works for us.
 
 The Steps to Save Snippets From the Clipboard:
 
  > 1. Specify a variable with the path for the snippets folder.
 
  > 2. Write the code to get the contents of our clipboard.
+ 
  > 3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format.
 
  > 4. Save the final Python script in a folder.
@@ -55,7 +56,7 @@ with open(snippet_dest_path, "w+") as snippet_file:
     snippet_file.write("}\n")
     snippet_file.write("}\n")
 ```
-This is code saves the content of the clipboard to the specified folder with a name given by the user when calling the script and with the required format needed to call the snippet.
+  This is code saves the content of the clipboard to the specified folder with a name given by the user when calling the script and with the required format needed to call the snippet.
     
 ## 4. Save the final Python script in a folder:
 

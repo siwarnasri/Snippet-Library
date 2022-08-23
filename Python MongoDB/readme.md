@@ -46,6 +46,6 @@ MongoDB will create the database if it does not exist, and make a connection to 
 
 > ``mydb = myclient["mydatabase"]``
 
-```diff
-##### + Important: In MongoDB, a database is not created until it gets content! 
-```
+### ```diff
+### + Important: In MongoDB, a database is not created until it gets content! 
+### ```

@@ -32,3 +32,17 @@ To test if the installation was successful, or if you already have "pymongo" ins
 > demo_mongodb_test.py:
 
 > ``import pymongo``
+
+# Python MongoDB Create Database:
+### Creating a Database:
+To create a database in MongoDB, start by creating a MongoClient object, then specify a connection URL with the correct ip address and the name of the database you want to create.
+
+MongoDB will create the database if it does not exist, and make a connection to it.
+> Create a database called "mydatabase":
+
+> ``import pymongo``
+
+> ``myclient = pymongo.MongoClient("mongodb://localhost:27017/")``
+
+> ``mydb = myclient["mydatabase"]``
+<span style="color: green"> Important: In MongoDB, a database is not created until it gets content! </span>

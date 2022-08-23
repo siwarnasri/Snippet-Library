@@ -43,11 +43,13 @@ MongoDB will create the database if it does not exist, and make a connection to 
 
 > Create a database called "mydatabase":
 
-```import pymongo
+```
+import pymongo
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
-mydb = myclient["mydatabase"]```
+mydb = myclient["mydatabase"]
+```
 
 ```diff
 + Important: In MongoDB, a database is not created until it gets content! 
@@ -58,7 +60,7 @@ MongoDB waits until you have created a collection (table), with at least one doc
 ##### Check if Database Exists:
 
 ```diff
-+ Remember: In MongoDB, a database is not created until it gets content, so if this is your first time creating a database, you should complete the next two chapters (create collection and create document) before you check if the database exists!
++ Remember: In MongoDB, a database is not created until it gets content, so if this is your first time creating a database, you should complete the next two chapters  + (create collection and create document) before you check if the database exists!
 ```
 
 You can check if a database exist by listing all databases in you system:
@@ -71,11 +73,13 @@ Or you can check a specific database by name:
 
 > Check if "mydatabase" exists:
 
-```dblist = myclient.list_database_names()
+```
+dblist = myclient.list_database_names()
 
 if "mydatabase" in dblist:
 
-  print("The database exists.")```
+  print("The database exists.")
+```
 
 # Python MongoDB Create Collection:
 
@@ -90,9 +94,11 @@ MongoDB will create the collection if it does not exist.
 
 > Create a collection called "customers":
 
-```import pymongo
+```
+import pymongo
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 mydb = myclient["mydatabase"]
 
-mycol = mydb["customers"]```
+mycol = mydb["customers"]
+```

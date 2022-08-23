@@ -22,12 +22,16 @@ PIP is most likely already installed in your Python environment.
 
 Navigate your command line to the location of PIP, and type the following:
 > Download and install "PyMongo":
+
 > ```C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>python -m pip install pymongo```
+
 Now you have downloaded and installed a mongoDB driver.
 
 ### Test PyMongo:
 To test if the installation was successful, or if you already have "pymongo" installed, create a Python page with the following content:
+
 > demo_mongodb_test.py:
+
 > ``import pymongo``
 
 # Python MongoDB Create Database:
@@ -36,10 +40,15 @@ To test if the installation was successful, or if you already have "pymongo" ins
 To create a database in MongoDB, start by creating a MongoClient object, then specify a connection URL with the correct ip address and the name of the database you want to create.
 
 MongoDB will create the database if it does not exist, and make a connection to it.
+
 > Create a database called "mydatabase":
+
 > ``import pymongo``
+
 > ``myclient = pymongo.MongoClient("mongodb://localhost:27017/")``
+
 > ``mydb = myclient["mydatabase"]``
+
 ```diff
 + Important: In MongoDB, a database is not created until it gets content! 
 ```
@@ -50,12 +59,19 @@ MongoDB waits until you have created a collection (table), with at least one doc
 + Remember: In MongoDB, a database is not created until it gets content, so if this is your first time creating a database, you should complete the next two chapters (create collection and create document) before you check if the database exists!
 ```
 You can check if a database exist by listing all databases in you system:
+
 > Return a list of your system's databases:
+
 > ``print(myclient.list_database_names())``
+
 Or you can check a specific database by name:
+
 > Check if "mydatabase" exists:
+
 > ``dblist = myclient.list_database_names()
+
 if "mydatabase" in dblist:
+
   print("The database exists.")``
 
 # Python MongoDB Create Collection:

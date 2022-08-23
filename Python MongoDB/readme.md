@@ -103,8 +103,7 @@ mydb = myclient["mydatabase"]
 mycol = mydb["customers"]
 ```
 
-```
-diff
+```diff
 + Important: In MongoDB, a collection is not created until it gets content!
 ```
 
@@ -112,8 +111,7 @@ MongoDB waits until you have inserted a document before it actually creates the 
 
 ### Check if Collection Exists:
 
-```
-diff
+```diff
 + Remember: In MongoDB, a collection is not created until it gets content, so if this is your first time creating a collection, you should complete the next chapter (create document) before you check if the collection exists!
 ```
 

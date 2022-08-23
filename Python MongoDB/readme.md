@@ -45,4 +45,7 @@ MongoDB will create the database if it does not exist, and make a connection to 
 > ``myclient = pymongo.MongoClient("mongodb://localhost:27017/")``
 
 > ``mydb = myclient["mydatabase"]``
-<span style="color: green"> Important: In MongoDB, a database is not created until it gets content! </span>
+
+```diff
++ Important: In MongoDB, a database is not created until it gets content!
+```

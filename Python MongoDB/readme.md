@@ -1,4 +1,5 @@
 Python can be used in database applications.
+
 One of the most popular NoSQL database is MongoDB.
 
 ## MongoDB:
@@ -20,3 +21,6 @@ We recommend that you use PIP to install "PyMongo".
 PIP is most likely already installed in your Python environment.
 
 Navigate your command line to the location of PIP, and type the following:
+> Download and install "PyMongo":
+
+> ```C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>python -m pip install pymongo```

@@ -32,7 +32,7 @@ To test if the installation was successful, or if you already have "pymongo" ins
 
 > demo_mongodb_test.py:
 
-``import pymongo``
+```import pymongo```
 
 # Python MongoDB Create Database:
 
@@ -43,11 +43,11 @@ MongoDB will create the database if it does not exist, and make a connection to 
 
 > Create a database called "mydatabase":
 
-``import pymongo``
+```import pymongo
 
-``myclient = pymongo.MongoClient("mongodb://localhost:27017/")``
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
-``mydb = myclient["mydatabase"]``
+mydb = myclient["mydatabase"]```
 
 ```diff
 + Important: In MongoDB, a database is not created until it gets content! 
@@ -71,11 +71,11 @@ Or you can check a specific database by name:
 
 > Check if "mydatabase" exists:
 
-``dblist = myclient.list_database_names()
+```dblist = myclient.list_database_names()
 
 if "mydatabase" in dblist:
 
-  print("The database exists.")``
+  print("The database exists.")```
 
 # Python MongoDB Create Collection:
 

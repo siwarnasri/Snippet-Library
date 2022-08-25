@@ -2,7 +2,7 @@ Python can be used in database applications.
 
 One of the most popular NoSQL database is MongoDB.
 
-### MongoDB:
+# MongoDB:
 MongoDB stores data in JSON-like documents, which makes the database very flexible and scalable.
 
 To be able to experiment with the code examples in this tutorial, you will need access to a MongoDB database.
@@ -345,5 +345,290 @@ mycol = mydb["customers"]
 
 for x in mycol.find({},{ "name": 1, "address": 0 }):
 
+  print(x)
+```
+# Python MongoDB Query:
+### Filter the Result:
+When finding documents in a collection, you can filter the result by using a query object.
+
+The first argument of the find() method is a query object, and is used to limit the search.
+
+> Find document(s) with the address "Park Lane 38":
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+myquery = { "address": "Park Lane 38" }
+
+mydoc = mycol.find(myquery)
+
+for x in mydoc:
+  print(x)
+```
+
+### Advanced Query:
+To make advanced queries you can use modifiers as values in the query object.
+
+E.g. to find the documents where the "address" field starts with the letter "S" or higher (alphabetically), use the greater than modifier: {"$gt": "S"}:
+
+> Find documents where the address starts with the letter "S" or higher:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+myquery = { "address": { "$gt": "S" } }
+
+mydoc = mycol.find(myquery)
+
+for x in mydoc:
+  print(x)
+```
+
+### Filter With Regular Expressions
+You can also use regular expressions as a modifier.
+
+```diff
++ Regular expressions can only be used to query strings.
+```
+
+To find only the documents where the "address" field starts with the letter "S", use the regular expression {"$regex": "^S"}:
+
+> Find documents where the address starts with the letter "S":
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+myquery = { "address": { "$regex": "^S" } }
+
+mydoc = mycol.find(myquery)
+
+for x in mydoc:
+  print(x)
+```
+
+# Python MongoDB Sort:
+### Sort the Result:
+Use the sort() method to sort the result in ascending or descending order.
+
+The sort() method takes one parameter for "fieldname" and one parameter for "direction" (ascending is the default direction).
+
+> Sort the result alphabetically by name:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+mydoc = mycol.find().sort("name")
+
+for x in mydoc:
+  print(x)
+```
+
+### Sort Descending:
+
+Use the value -1 as the second parameter to sort descending.
+
+```diff
++ sort("name", 1) #ascending
+
++ sort("name", -1) #descending
+```
+
+> Sort the result reverse alphabetically by name:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+mydoc = mycol.find().sort("name", -1)
+
+for x in mydoc:
+  print(x)
+```
+
+# Python MongoDB Delete Document:
+### Delete Document
+
+To delete one document, we use the delete_one() method.
+
+The first parameter of the delete_one() method is a query object defining which document to delete.
+
+```diff
++ Note: If the query finds more than one document, only the first occurrence is deleted.
+```
+
+> Delete the document with the address "Mountain 21":
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = myclient["mydatabase"]
+
+mycol = mydb["customers"]
+
+myquery = { "address": "Mountain 21" }
+
+mycol.delete_one(myquery)
+```
+### Delete Many Documents:
+To delete more than one document, use the delete_many() method.
+
+The first parameter of the delete_many() method is a query object defining which documents to delete.
+
+> Delete all documents were the address starts with the letter S:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+myquery = { "address": {"$regex": "^S"} }
+
+x = mycol.delete_many(myquery)
+
+print(x.deleted_count, " documents deleted.")
+```
+
+### Delete All Documents in a Collection:
+To delete all documents in a collection, pass an empty query object to the delete_many() method:
+
+> Delete all documents in the "customers" collection:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = myclient["mydatabase"]
+
+mycol = mydb["customers"]
+
+x = mycol.delete_many({})
+
+print(x.deleted_count, " documents deleted.")
+```
+
+# Python MongoDB Drop Collection:
+### Delete Collection:
+You can delete a table, or collection as it is called in MongoDB, by using the drop() method.
+
+> Delete the "customers" collection:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = myclient["mydatabase"]
+
+mycol = mydb["customers"]
+
+mycol.drop()
+```
+
+The drop() method returns true if the collection was dropped successfully, and false if the collection does not exist.
+
+# Python MongoDB Update:
+### Update Collection:
+You can update a record, or document as it is called in MongoDB, by using the update_one() method.
+
+The first parameter of the update_one() method is a query object defining which document to update.
+
+```diff
++ Note: If the query finds more than one record, only the first occurrence is updated.
+```
+
+The second parameter is an object defining the new values of the document.
+
+> Change the address from "Valley 345" to "Canyon 123":
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = myclient["mydatabase"]
+
+mycol = mydb["customers"]
+
+myquery = { "address": "Valley 345" }
+
+newvalues = { "$set": { "address": "Canyon 123" } }
+
+mycol.update_one(myquery, newvalues)
+
+#print "customers" after the update:
+
+for x in mycol.find():
+  print(x)
+```
+
+### Update Many:
+To update all documents that meets the criteria of the query, use the update_many() method.
+
+> Update all documents where the address starts with the letter "S":
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = myclient["mydatabase"]
+
+mycol = mydb["customers"]
+
+myquery = { "address": { "$regex": "^S" } }
+
+newvalues = { "$set": { "name": "Minnie" } }
+
+x = mycol.update_many(myquery, newvalues)
+
+print(x.modified_count, "documents updated.")
+```
+
+# Python MongoDB Limit:
+### Limit the Result:
+
+To limit the result in MongoDB, we use the limit() method.
+
+The limit() method takes one parameter, a number defining how many documents to return.
+
+Consider you have a "customers" collection:
+
+> Limit the result to only return 5 documents:
+
+```
+import pymongo
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycol = mydb["customers"]
+
+myresult = mycol.find().limit(5)
+
+#print the result:
+for x in myresult:
   print(x)
 ```

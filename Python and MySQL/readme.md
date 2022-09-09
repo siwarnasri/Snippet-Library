@@ -31,3 +31,28 @@ Now you have downloaded and installed a MySQL driver.
 To test if the installation was successful, or if you already have "MySQL Connector" installed, create a Python page with the following content:
 
 > demo_mysql_test.py:
+
+```
+import mysql.connector
+```
+
+If the above code was executed with no errors, "MySQL Connector" is installed and ready to be used.
+
+### Create Connection:
+
+Start by creating a connection to the database.
+
+Use the username and password from your MySQL database:
+
+> demo_mysql_connection.py:
+
+```import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword"
+)
+
+print(mydb)
+```

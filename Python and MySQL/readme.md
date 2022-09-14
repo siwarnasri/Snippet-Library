@@ -633,3 +633,85 @@ print(mycursor.rowcount, "record(s) deleted")
 ```
 
 # Python MySQL Drop Table:
+
+### Delete a Table/:
+
+You can delete an existing table by using the "DROP TABLE" statement:
+
+> Delete the table "customers":
+
+```
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "DROP TABLE customers"
+
+mycursor.execute(sql)
+```
+
+### Drop Only if Exist:
+
+If the table you want to delete is already deleted, or for any other reason does not exist, you can use the IF EXISTS keyword to avoid getting an error.
+
+> Delete the table "customers" if it exists:
+
+```
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "DROP TABLE IF EXISTS customers"
+
+mycursor.execute(sql)
+```
+
+# Python MySQL Update Table:
+
+### Update Table:
+
+You can update existing records in a table by using the "UPDATE" statement:
+
+> Overwrite the address column from "Valley 345" to "Canyon 123":
+
+```
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "UPDATE customers SET address = 'Canyon 123' WHERE address = 'Valley 345'"
+
+mycursor.execute(sql)
+
+mydb.commit()
+
+print(mycursor.rowcount, "record(s) affected")
+```
+
+```diff
++ Important!: Notice the statement: mydb.commit(). It is required to make the changes, otherwise no changes are made to the table.
+
++ Notice the WHERE clause in the UPDATE syntax: The WHERE clause specifies which record or records that should be updated. 
++ If you omit the WHERE clause, all records will be updated!
+```

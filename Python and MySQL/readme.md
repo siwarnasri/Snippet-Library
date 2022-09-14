@@ -46,7 +46,8 @@ Use the username and password from your MySQL database:
 
 > demo_mysql_connection.py:
 
-```import mysql.connector
+```
+import mysql.connector
 
 mydb = mysql.connector.connect(
   host="localhost",

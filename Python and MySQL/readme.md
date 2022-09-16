@@ -815,9 +815,9 @@ $$\textcolor{Purple}{\text``\{ id: 1, name: 'John', fav: 154\},``}$$
 
 $$\textcolor{Purple}{\text`\{ id: 2, name: 'Peter', fav: 154\},`}$$
 
-$$\textcolor{Purple}{\text{\{ id: 3, name: 'Amy', fav: 155\},}}$$ 
+$$\textcolor{Purple}{\text``\{ id: 3, name: 'Amy', fav: 155\},``}$$ 
 
-$$\textcolor{Purple}{\text{\{ id: 4, name: 'Hannah', fav:\},}}$$
+$$\textcolor{Purple}{\text``\{ id: 4, name: 'Hannah', fav:\},``}$$
 
-$$\textcolor{Purple}{\text{\{ id: 5, name: 'Michael', fav:\}}}$$
+$$\textcolor{Purple}{\text``\{ id: 5, name: 'Michael', fav:\}``}$$
 

@@ -811,9 +811,9 @@ Consider you have a "users" table and a "products" table:
 > users
 
 
-$$\textcolor{Purple}{\text{\{ id: 1, name: 'John', fav: 154\},}}$$
+$$\textcolor{Purple}{\text``\{ id: 1, name: 'John', fav: 154\},``}$$
 
-$$\textcolor{Purple}{\text{\{ id: 2, name: 'Peter', fav: 154\},}}$$
+$$\textcolor{Purple}{\text`\{ id: 2, name: 'Peter', fav: 154\},`}$$
 
 $$\textcolor{Purple}{\text{\{ id: 3, name: 'Amy', fav: 155\},}}$$ 
 

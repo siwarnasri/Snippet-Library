@@ -802,3 +802,18 @@ for x in myresult:
   print(x)
 ```
 # Python MySQL Join:
+
+### Join Two or More Tables:
+You can combine rows from two or more tables, based on a related column between them, by using a JOIN statement.
+
+Consider you have a "users" table and a "products" table:
+
+> users
+
+```diff
+{ id: 1, name: 'John', fav: 154},
+{ id: 2, name: 'Peter', fav: 154},
+{ id: 3, name: 'Amy', fav: 155},
+{ id: 4, name: 'Hannah', fav:},
+{ id: 5, name: 'Michael', fav:}
+```

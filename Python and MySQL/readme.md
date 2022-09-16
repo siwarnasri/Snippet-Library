@@ -812,7 +812,7 @@ Consider you have a "users" table and a "products" table:
 
 $$\textcolor{Purple}{\text
 `
-{ id: 1, name: 'John', fav: 154},
+\{ id: 1, name: 'John', fav: 154\},
 { id: 2, name: 'Peter', fav: 154},
 { id: 3, name: 'Amy', fav: 155},
 { id: 4, name: 'Hannah', fav:},

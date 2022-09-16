@@ -817,3 +817,5 @@ Consider you have a "users" table and a "products" table:
 { id: 4, name: 'Hannah', fav:},
 { id: 5, name: 'Michael', fav:}
 ```
+
+$$\textcolor{yellow}{\text{Hello World}}$$

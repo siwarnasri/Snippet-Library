@@ -821,3 +821,60 @@ $$\textcolor{Purple}{\text``\{ id: 4, name: 'Hannah', fav:\},``}$$
 
 $$\textcolor{Purple}{\text``\{ id: 5, name: 'Michael', fav:\}``}$$
 
+> products
+
+$$\textcolor{Purple}{\text``\{ id: 154, name: 'Chocolate Heaven' \},``}$$
+
+$$\textcolor{Purple}{\text``\{ id: 155, name: 'Tasty Lemons' \},``}$$
+
+$$\textcolor{Purple}{\text``\{ id: 156, name: 'Vanilla Dreams' \}``}$$
+
+These two tables can be combined by using users' fav field and products' id field.
+
+> Join users and products to see the name of the users favorite product:
+
+```
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername",
+  password="yourpassword",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT \
+  users.name AS user, \
+  products.name AS favorite \
+  FROM users \
+  INNER JOIN products ON users.fav = products.id"
+
+mycursor.execute(sql)
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
+```
+
+```DIFF
++ Note: You can use JOIN instead of INNER JOIN. They will both give you the same result.
+```
+
+### LEFT JOIN:
+
+In the example above, Hannah, and Michael were excluded from the result, that is because INNER JOIN only shows the records where there is a match.
+
+If you want to show all users, even if they do not have a favorite product, use the LEFT JOIN statement:
+
+> Select all users and their favorite product:
+
+```
+sql = "SELECT \
+  users.name AS user, \
+  products.name AS favorite \
+  FROM users \
+  LEFT JOIN products ON users.fav = products.id"
+```

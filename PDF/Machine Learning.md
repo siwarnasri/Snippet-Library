@@ -1,6 +1,6 @@
 # Machine Learning:
 
-$$\textcolor{Blue}{\text\{ Machine Learning is making the computer learn from studying data and statistics.
+$$\textcolor{Purple}{\text\{ Machine Learning is making the computer learn from studying data and statistics.
 
 Machine Learning is a step into the direction of artificial intelligence (AI).
 

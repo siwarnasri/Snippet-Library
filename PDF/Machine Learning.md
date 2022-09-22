@@ -27,7 +27,6 @@ Example of a database:
 | Carname | Color |	Age |	Speed	| AutoPass |
 |---------|-------|-----|-------|----------|
 | BMW | red | 5 | 99 | Y |
-|---------|-------|-----|-------|----------|
 |Volvo	|black	|7	|86	|Y|
 |VW	|gray	|8	|87	|N|
 |VW	|white	|7	|88	|Y|

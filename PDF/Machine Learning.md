@@ -46,7 +46,7 @@ And by looking at the database we can see that the most popular color is white, 
 
 That is what Machine Learning is for! Analyzing data and predicting the outcome!
 
-
+```html
 <div style="color:white;
            display:fill;
            border-radius:5px;
@@ -62,6 +62,6 @@ That is what Machine Learning is for! Analyzing data and predicting the outcome!
            
            The old that is strong does not wither,Deep roots are not reached by the frost.
            
-           $$\textcolor{`#0969DA`}{\text{Machine Learning is making the computer learn from studying data and statistics.}}$$
 </p>
 </div>
+```

@@ -46,22 +46,3 @@ And by looking at the database we can see that the most popular color is white, 
 
 That is what Machine Learning is for! Analyzing data and predicting the outcome!
 
-```html
-<div style="color:white;
-           display:fill;
-           border-radius:5px;
-           background-color:#5642C5;
-           font-size:110%;
-           font-family:Verdana;
-           letter-spacing:0.5px">
-
-<p style="padding: 10px;
-              color:white;">
-
-              All that is gold does not glitter,Not all those who wander are lost;
-           
-           The old that is strong does not wither,Deep roots are not reached by the frost.
-           
-</p>
-</div>
-```

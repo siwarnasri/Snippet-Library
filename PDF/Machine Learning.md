@@ -41,3 +41,4 @@ Example of a database:
 |Toyota	|blue	|6	|86	|Y|
 
 `#0969DA` The background color should be `#ffffff` for light mode and `#0d1117` for dark mode.
+$$\textcolor{`#0969DA`}{\text{Machine Learning is making the computer learn from studying data and statistics.}}$$

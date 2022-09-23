@@ -66,6 +66,8 @@ That is what Machine Learning is for! Analyzing data and predicting the outcome!
 <p style="padding: 10px;
               color:white;">
 
-              All that is gold does not glitter,Not all those who wander are lost;The old that is strong does not wither,Deep roots are not reached by the frost.
+              All that is gold does not glitter,Not all those who wander are lost;
+           
+           The old that is strong does not wither,Deep roots are not reached by the frost.
 </p>
 </div>

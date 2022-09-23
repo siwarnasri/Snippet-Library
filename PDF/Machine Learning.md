@@ -45,3 +45,5 @@ By looking at the array, we can guess that the average value is probably around 
 And by looking at the database we can see that the most popular color is white, and the oldest car is 17 years, but what if we could predict if a car had an AutoPass, just by looking at the other values?
 
 That is what Machine Learning is for! Analyzing data and predicting the outcome!
+
+<div class="alert alert-block alert-info"> this is it </div>

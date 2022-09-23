@@ -1,10 +1,10 @@
 # Machine Learning:
 
-$$\textcolor{Purple}{\text{Machine Learning is making the computer learn from studying data and statistics.}}$$
+$$\textcolor{`#0969DA`}{\text{Machine Learning is making the computer learn from studying data and statistics.}}$$
 
-$$\textcolor{Purple}{\text{Machine Learning is a step into the direction of artificial intelligence (AI).}}$$
+$$\textcolor{`#0969DA`}{\text{Machine Learning is a step into the direction of artificial intelligence (AI).}}$$
 
-$$\textcolor{Purple}{\text{Machine Learning is a program that analyses data and learns to predict the outcome.}}$$
+$$\textcolor{`#0969DA`}{\text{Machine Learning is a program that analyses data and learns to predict the outcome.}}$$
 
 ### Where To Start?
 
@@ -40,6 +40,8 @@ Example of a database:
 |VW	|white	|9	|85	|N|
 |Toyota	|blue	|6	|86	|Y|
 
-`#0969DA` The background color should be `#ffffff` for light mode and `#0d1117` for dark mode.
+By looking at the array, we can guess that the average value is probably around 80 or 90, and we are also able to determine the highest value and the lowest value, but what else can we do?
 
-$$\textcolor{`#0969DA`}{\text{Machine Learning is making the computer learn from studying data and statistics.}}$$
+And by looking at the database we can see that the most popular color is white, and the oldest car is 17 years, but what if we could predict if a car had an AutoPass, just by looking at the other values?
+
+That is what Machine Learning is for! Analyzing data and predicting the outcome!

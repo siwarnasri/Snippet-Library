@@ -39,3 +39,5 @@ Example of a database:
 |Toyota	|gray	|12	|77	|N|
 |VW	|white	|9	|85	|N|
 |Toyota	|blue	|6	|86	|Y|
+
+The background color should be `#ffffff` for light mode and `#0d1117` for dark mode.

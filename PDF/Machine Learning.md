@@ -46,3 +46,7 @@ And by looking at the database we can see that the most popular color is white, 
 
 That is what Machine Learning is for! Analyzing data and predicting the outcome!
 
+```diff
++ In Machine Learning it is common to work with very large data sets. 
++ In this tutorial we will try to make it as easy as possible to understand the different concepts of machine learning, and we will work with small easy-to-understand data sets.
+```

@@ -14,7 +14,7 @@ print(x)
 print(y)
 ```
 > 5
-
+>
 > 25
 
 The abs() function returns the absolute (positive) value of the specified number:
@@ -75,3 +75,16 @@ print(y) # returns 1
 > 2
 >
 > 1
+
+The math.pi constant, returns the value of PI (3.14...):
+
+```
+import math
+
+x = math.pi
+
+print(x)
+```
+> 3.141592653589793
+
+# Python math Module:

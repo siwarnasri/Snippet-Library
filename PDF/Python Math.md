@@ -73,7 +73,5 @@ print(x) # returns 2
 print(y) # returns 1
 ```
 > 2
-
-> 1
-> 1
+>
 > 1

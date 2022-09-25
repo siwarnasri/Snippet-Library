@@ -98,6 +98,7 @@ The math module has a set of methods and constants.
 ### Math Methods:
 
 | Method	| Description |
+|---------|-------------|
 |math.acos()	|Returns the arc cosine of a number|
 |math.acosh()	|Returns the inverse hyperbolic cosine of a number|
 |math.asin()	|Returns the arc sine of a number|

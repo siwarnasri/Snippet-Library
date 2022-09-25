@@ -97,25 +97,25 @@ The math module has a set of methods and constants.
 
 ### Math Methods:
 
-|Method	|Description|
-|math.acos()	Returns the arc cosine of a number|
-|math.acosh()	Returns the inverse hyperbolic cosine of a number|
-|math.asin()	Returns the arc sine of a number|
-|math.asinh()	Returns the inverse hyperbolic sine of a number|
-|math.atan()	Returns the arc tangent of a number in radians|
-|math.atan2()	Returns the arc tangent of y/x in radians|
-|math.atanh()	Returns the inverse hyperbolic tangent of a number|
-|math.ceil()	Rounds a number up to the nearest integer|
-|math.comb()	Returns the number of ways to choose k items from n items without repetition and order|
-|math.copysign()	Returns a float consisting of the value of the first parameter and the sign of the second parameter|
-|math.cos()	Returns the cosine of a number|
-|math.cosh()	Returns the hyperbolic cosine of a number|
-|math.degrees()	Converts an angle from radians to degrees|
-|math.dist()	Returns the Euclidean distance between two points (p and q), where p and q are the coordinates of that point|
-|math.erf()	Returns the error function of a number|
-|math.erfc()	Returns the complementary error function of a number|
-|math.exp()	Returns E raised to the power of x|
-|math.expm1()	Returns Ex - 1|
+| Method	| Description |
+|math.acos()	|Returns the arc cosine of a number|
+|math.acosh()	|Returns the inverse hyperbolic cosine of a number|
+|math.asin()	|Returns the arc sine of a number|
+|math.asinh()	|Returns the inverse hyperbolic sine of a number|
+|math.atan()	|Returns the arc tangent of a number in radians|
+|math.atan2()	|Returns the arc tangent of y/x in radians|
+|math.atanh()	|Returns the inverse hyperbolic tangent of a number|
+|math.ceil()	|Rounds a number up to the nearest integer|
+|math.comb()	|Returns the number of ways to choose k items from n items without repetition and order|
+|math.copysign()	|Returns a float consisting of the value of the first parameter and the sign of the second parameter|
+|math.cos()	|Returns the cosine of a number|
+|math.cosh()	|Returns the hyperbolic cosine of a number|
+|math.degrees()	|Converts an angle from radians to degrees|
+|math.dist()	|Returns the Euclidean distance between two points (p and q), where p and q are the coordinates of that point|
+|math.erf()	|Returns the error function of a number|
+|math.erfc()	|Returns the complementary error function of a number|
+|math.exp()	|Returns E raised to the power of x|
+|math.expm1()	|Returns Ex - 1|
 |math.fabs()	Returns the absolute value of a number|
 |math.factorial()	Returns the factorial of a number|
 |math.floor()	Rounds a number down to the nearest integer|

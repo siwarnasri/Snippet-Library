@@ -54,5 +54,5 @@ Metacharacters are characters with a special meaning:
 |+	|One or more occurrences	|"he.+o"	|
 |?	|Zero or one occurrences	|"he.?o"	|
 |{}	|Exactly the specified number of occurrences	|"he.{2}o"	|
-||	|Either or	|"falls|stays"	|
+|\|	|Either or	|"falls\|stays"	|
 |()	|Capture and group|	| 

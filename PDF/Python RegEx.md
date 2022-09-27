@@ -18,7 +18,7 @@ import re
 
 When you have imported the re module, you can start using regular expressions:
 
-####### Search the string to see if it starts with "The" and ends with "Spain":
+##### Search the string to see if it starts with "The" and ends with "Spain":
 
 ```
 import re

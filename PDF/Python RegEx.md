@@ -65,10 +65,10 @@ A special sequence is a \ followed by one of the characters in the list below, a
 |-----------|-------------|---------|
 |\A	|Returns a match if the specified characters are at the beginning of the string	|"\AThe"|	
 |\b	|Returns a match where the specified characters are at the beginning or at the end of a word
-(the "r" in the beginning is making sure that the string is being treated as a "raw string")	r"\bain"
+(the "r" in the beginning is making sure that the string is being treated as a "raw string")	|r"\bain"
 r"ain\b"|
 |\B	|Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word
-(the "r" in the beginning is making sure that the string is being treated as a "raw string")	r"\Bain"
+(the "r" in the beginning is making sure that the string is being treated as a "raw string")	|r"\Bain"
 r"ain\B"|	
 |\d	|Returns a match where the string contains digits (numbers from 0-9)	|"\d"|	
 |\D	|Returns a match where the string DOES NOT contain digits	|"\D"	|

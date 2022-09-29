@@ -244,3 +244,42 @@ The Match object has properties and methods used to retrieve information about t
 
 > Print the position (start- and end-position) of the first match occurrence.
 > The regular expression looks for any words that starts with an upper case "S":
+
+```
+import re
+
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.span())
+```
+
+> (12, 17)
+
+> Print the string passed into the function:
+
+```
+import re
+
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.string)
+```
+
+> The rain in Spain
+
+> Print the part of the string where there was a match.
+> The regular expression looks for any words that starts with an upper case "S":
+
+```
+import re
+
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.group())
+```
+
+> Spain
+
+```diff
++ Note: If there is no match, the value None will be returned, instead of the Match Object.
+```

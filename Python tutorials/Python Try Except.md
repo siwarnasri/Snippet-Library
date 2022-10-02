@@ -1,12 +1,10 @@
 # Python Try Except:
 
-The try block lets you test a block of code for errors.
+${The \ {\color{red}try}}\ \ block\ lets\ you\ test\ a\ block\ of\ code\ for\ errors.$
 
-The except block lets you handle the error.
+${The \ {\color{red}except}}\ \ block\ lets\ you\ handle\ the\ error.$
 
-The else block lets you execute code when there is no error.
-
-The finally block lets you execute code, regardless of the result of the try- and except blocks.
+${The \ {\color{red}else}}\ \ block\ lets\ you\ execute\ code\ when\ there\ is\ no\ error.$
 
 ${The \ {\color{red}finally}}\ \ block\ lets\ you \ execute \ code,\ regardless\ of\ the\ result\ of\ the\ try-\ and\ except\ blocks.$
 
@@ -37,8 +35,8 @@ Without the try block, the program will crash and raise an error:
 
 > Traceback (most recent call last):
 > 
-> \ File "demo_try_except_error.py", line 3, in <module>
+>  File "demo_try_except_error.py", line 3, in <module>
 >
-> \   print(x)
+>    print(x)
 >
 >  NameError: name 'x' is not defined

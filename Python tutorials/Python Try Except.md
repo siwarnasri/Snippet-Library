@@ -37,8 +37,8 @@ Without the try block, the program will crash and raise an error:
 
 > Traceback (most recent call last):
 > 
->  File "demo_try_except_error.py", line 3, in <module>
+> \ File "demo_try_except_error.py", line 3, in <module>
 >
->    print(x)
+> \   print(x)
 >
 >  NameError: name 'x' is not defined

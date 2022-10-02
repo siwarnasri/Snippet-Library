@@ -36,6 +36,9 @@ Without the try block, the program will crash and raise an error:
 ```print(x)```
 
 > Traceback (most recent call last):
+> 
 >  File "demo_try_except_error.py", line 3, in <module>
+>
 >    print(x)
-> NameError: name 'x' is not defined
+>
+>  NameError: name 'x' is not defined

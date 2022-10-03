@@ -129,3 +129,10 @@ x = -1
 if x < 0:
   raise Exception("Sorry, no numbers below zero")
 ```
+
+> Traceback (most recent call last):
+>
+>  File "demo_ref_keyword_raise.py", line 4, in <module>
+>    raise Exception("Sorry, no numbers below zero")
+>
+>  Exception: Sorry, no numbers below zero

@@ -76,3 +76,56 @@ else:
 > Hello
 >
 > Nothing went wrong
+
+### Finally:
+  
+The finally block, if specified, will be executed regardless if the try block raises an error or not.
+  
+```
+try:
+  print(x)
+except:
+  print("Something went wrong")
+finally:
+  print("The 'try except' is finished")
+```
+  
+> Something went wrong
+>
+> The 'try except' is finished
+  
+This can be useful to close objects and clean up resources:
+
+> Try to open and write to a file that is not writable:
+  
+```
+try:
+  f = open("demofile.txt")
+  try:
+    f.write("Lorum Ipsum")
+  except:
+    print("Something went wrong when writing to the file")
+  finally:
+    f.close()
+except:
+  print("Something went wrong when opening the file")
+```
+  
+> Something went wrong when writing to the file
+  
+The program can continue, without leaving the file object open.
+
+### Raise an exception:
+  
+As a Python developer you can choose to throw an exception if a condition occurs.
+
+To throw (or raise) an exception, use the raise keyword.
+
+> Raise an error and stop the program if x is lower than 0:
+  
+```
+x = -1
+
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+```

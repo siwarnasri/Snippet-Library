@@ -136,3 +136,23 @@ if x < 0:
 >    raise Exception("Sorry, no numbers below zero")
 >
 >  Exception: Sorry, no numbers below zero
+  
+${The \ {\color{red}raise}}\ \ keyword\ is\ used\ to\ raise\ an\ exception.$
+  
+You can define what kind of error to raise, and the text to print to the user.
+
+> Raise a TypeError if x is not an integer:
+  
+```
+x = "hello"
+
+if not type(x) is int:
+  raise TypeError("Only integers are allowed")
+```
+  
+> Traceback (most recent call last):
+>
+>  File "demo_ref_keyword_raise2.py", line 4, in <module>
+>    raise TypeError("Only integers are allowed")
+>
+>  TypeError: Only integers are allowed

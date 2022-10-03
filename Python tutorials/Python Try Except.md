@@ -40,3 +40,39 @@ Without the try block, the program will crash and raise an error:
 >    print(x)
 >
 >  NameError: name 'x' is not defined
+
+### Many Exceptions:
+  
+You can define as many exception blocks as you want, e.g. if you want to execute a special block of code for a special kind of error:
+
+> Print one message if the try block raises a NameError and another for other errors:
+  
+```
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
+```
+  
+> Variable x is not defined
+
+### Else:
+  
+You can use the else keyword to define a block of code to be executed if no errors were raised:
+
+> In this example, the try block does not generate any error:
+ 
+```
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+```
+  
+> Hello
+>
+> Nothing went wrong

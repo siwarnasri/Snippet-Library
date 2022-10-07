@@ -20,13 +20,13 @@ Now, let’s go through each step one by one.
 
 ## 1. Specify a variable with the path to the snippets folder:
 
-```
+```python
 global_snippets_folder = "snippets_path" 
 ```
 Change "snippets_path" to your specific case.
 
 ## 2. Write the code to get the contents of your clipboard:
-```
+```python
 import clipboard
 clipboard.paste()
 clipboard_content = clipboard.paste()
@@ -34,7 +34,7 @@ clipboard_content = clipboard.paste()
 Here, we are using the clipboard package to get the contents of your clipboard.
 
 ## 3. Write the code to save the content in a pre-specified snippets file (to be determined when calling the script) with the right format:
-```
+```python
 snippets_name = input("Snippet name: ")
 snippet_dest_path = global_snippets_folder + snippets_name + ".code-snippets"
 

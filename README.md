@@ -65,7 +65,7 @@ Here you can save it in wherever folder you want inside your computer.
 ## 5. Write an alias to call that script from anywhere in the terminal:
 
 To do this all you have to do (assuming you are working in a Linux machine or in Windows but with WSL: Linux), is open your .bashrc file and write:
-```
+```python
 alias save_snippet_from_clipboard="snippets_path"
 ```
 Then, save the modified file and run source .bashrc to update your terminal.

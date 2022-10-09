@@ -20,7 +20,7 @@ Navigate your command line to the location of PIP, and type the following:
 
 > Download and install "MySQL Connector":
 
-```
+```python
 C:\Users\Your Name\AppData\Local\Programs\Python\Python36-32\Scripts>python -m pip install mysql-connector-python
 ```
 
@@ -32,7 +32,7 @@ To test if the installation was successful, or if you already have "MySQL Connec
 
 > demo_mysql_test.py:
 
-```
+```python
 import mysql.connector
 ```
 
@@ -46,7 +46,7 @@ Use the username and password from your MySQL database:
 
 > demo_mysql_connection.py:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -68,7 +68,7 @@ To create a database in MySQL, use the "CREATE DATABASE" statement:
 
 > create a database named "mydatabase":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -90,7 +90,7 @@ You can check if a database exist by listing all databases in your system by usi
 
 > Return a list of your system's databases:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -111,7 +111,7 @@ Or you can try to access the database when making the connection:
 
 > Try connecting to the database "mydatabase":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -134,7 +134,7 @@ Make sure you define the name of the database when you create the connection
 
 > Create a table named "customers":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -155,7 +155,7 @@ If the above code was executed with no errors, you have now successfully created
 
 You can check if a table exist by listing all tables in your database with the "SHOW TABLES" statement:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -185,7 +185,7 @@ We use the statement "INT AUTO_INCREMENT PRIMARY KEY" which will insert a unique
 
 > Create primary key when creating the table:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -204,7 +204,7 @@ If the table already exists, use the ALTER TABLE keyword:
 
 > Create primary key on an existing table:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -227,7 +227,7 @@ To fill a table in MySQL, use the "INSERT INTO" statement.
 
 > Insert a record in the "customers" table:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -260,7 +260,7 @@ The second parameter of the executemany() method is a list of tuples, containing
 
 > Fill the "customers" table with data:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -306,7 +306,7 @@ You can get the id of the row you just inserted by asking the cursor object.
 
 > Insert one row, and return the ID:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -335,7 +335,7 @@ To select from a table in MySQL, use the "SELECT" statement:
 
 > Select all records from the "customers" table, and display the result:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -365,7 +365,7 @@ To select only some of the columns in a table, use the "SELECT" statement follow
 
 > Select only the name and address columns:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -393,7 +393,7 @@ The fetchone() method will return the first row of the result:
 
 > Fetch only one row:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -420,7 +420,7 @@ When selecting records from a table, you can filter the selection by using the "
 
 > Select record(s) where the address is "Park Lane 38": result:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -450,7 +450,7 @@ Use the %  to represent wildcard characters:
 
 > Select records where the address contains the word "way":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -482,7 +482,7 @@ The mysql.connector module has methods to escape query values:
 
 > Escape query values by using the placholder %s method:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -515,7 +515,7 @@ The ORDER BY keyword sorts the result ascending by default. To sort the result i
 
 > Sort the result alphabetically by name: result:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -543,7 +543,7 @@ Use the DESC keyword to sort the result in a descending order.
 
 > Sort the result reverse alphabetically by name:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -573,7 +573,7 @@ You can delete records from an existing table by using the "DELETE FROM" stateme
 
 > Delete any record where the address is "Mountain 21":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -611,7 +611,7 @@ The mysql.connector module uses the placeholder %s to escape values in the delet
 
 > Escape values by using the placeholder %s method:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -641,7 +641,7 @@ You can delete an existing table by using the "DROP TABLE" statement:
 
 > Delete the table "customers":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -664,7 +664,7 @@ If the table you want to delete is already deleted, or for any other reason does
 
 > Delete the table "customers" if it exists:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -689,7 +689,7 @@ You can update existing records in a table by using the "UPDATE" statement:
 
 > Overwrite the address column from "Valley 345" to "Canyon 123":
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -727,7 +727,7 @@ The mysql.connector module uses the placeholder %s to escape values in the delet
 
 > Escape values by using the placeholder %s method:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -756,7 +756,8 @@ print(mycursor.rowcount, "record(s) affected")
 You can limit the number of records returned from the query, by using the "LIMIT" statement:
 
 > Select the 5 first records in the "customers" table:
-```
+
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -782,7 +783,7 @@ If you want to return five records, starting from the third record, you can use 
 
 > Start from position 3, and return 5 records:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -833,7 +834,7 @@ These two tables can be combined by using users' fav field and products' id fiel
 
 > Join users and products to see the name of the users favorite product:
 
-```
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -859,7 +860,7 @@ for x in myresult:
   print(x)
 ```
 
-```DIFF
+```diff
 + Note: You can use JOIN instead of INNER JOIN. They will both give you the same result.
 ```
 
@@ -871,7 +872,7 @@ If you want to show all users, even if they do not have a favorite product, use 
 
 > Select all users and their favorite product:
 
-```
+```python
 sql = "SELECT \
   users.name AS user, \
   products.name AS favorite \
@@ -885,7 +886,7 @@ If you want to return all products, and the users who have them as their favorit
 
 > Select all products, and the user(s) who have them as their favorite:
 
-```
+```python
 sql = "SELECT \
   users.name AS user, \
   products.name AS favorite \
